@@ -38,6 +38,13 @@ html,body {
     /* margin: 6px auto; */
 }
 
-#provalue {
-    margin: auto;
+#values {
+    width: 250px;
+    height: 35px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 28px;
+    border: 0;
+    border-bottom: #CCC solid 2px;
+    margin: 15px auto 0 auto;
 }
