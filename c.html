@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>C page</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="show">
+			<span></span>
+		</div>
+	<script>
+		let arr = new Array();
+		for (i=0;i<100;i++){
+			if (i%7===0){
+				arr.push(i);
+			} else if (i%10===7){
+				arr.push(i);
+			} else if (i/10===7){
+				arr.push(i);
+			}
+		let show = document.getElementById("show");
+		show.innerHTML = arr;
+	</script>
+	</body>
+</html>
+				
