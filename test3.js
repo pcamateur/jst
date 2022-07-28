@@ -1,18 +1,26 @@
-const m = new Map();
+console.log('script start');
 
-const objKey = {};
-      objVal = {};
-      arrKey = [];
-      arrVal = [];
+async function async1() {
+      await async2();
+      console.log('async1 done');
+}
 
-m.set(objKey, objVal);
-m.set(arrKey, arrVal);
+async function async2() {
+      return new Promise((resolve, reject) => {
+            console.log('async2 done');
+            resolve('ok')
+      })
+}
 
-objKey.foo = "foo";
-objVal.bar = "bar";
-arrKey.push("foo");
-arrVal.push("bar");
+async1()
 
-console.log(m.get(objKey));
-console.log(m.get(arrKey));
-console.log(m);
+new Promise(resolve => {
+      console.log('Promise');
+      resolve();
+}).then(function() {
+      console.log('Promise1 done');
+}).then(function() {
+      console.log('Promise2 done');
+})
+
+console.log('script end');
